@@ -7,6 +7,20 @@
   </head>
   <body style="text-align: center">
     <canvas id="unity-canvas" style="width: 800px; height: 450px; background: #000000"></canvas>
+    <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    background-color: #2e4e40;
+  }
+
+  #unity-canvas {
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
+</style>
     <script src="Build/try9.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
