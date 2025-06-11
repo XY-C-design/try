@@ -13,7 +13,7 @@
       canvas.onwheel = null;
       canvas.addEventListener("wheel", function (e) {
         e.stopPropagation(); // 阻止 Unity 拦截
-      }, { passive: true });
+      }, { passive: false });
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/try9.data",
         frameworkUrl: "Build/try9.framework.js",
