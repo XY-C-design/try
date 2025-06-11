@@ -9,6 +9,11 @@
     <canvas id="unity-canvas" style="width: 100%; height: auto; background: #000000"></canvas>
     <script src="Build/try9.loader.js"></script>
     <script>
+      const canvas = document.querySelector("#unity-canvas");
+      canvas.onwheel = null;
+      canvas.addEventListener("wheel", function (e) {
+        e.stopPropagation(); // 阻止 Unity 拦截
+      }, { passive: true });
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/try9.data",
         frameworkUrl: "Build/try9.framework.js",
